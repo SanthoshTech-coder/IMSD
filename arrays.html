@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Operations Example</title>
+  <style>
+    body{
+        color: blueviolet;
+        font-size: medium;
+      
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let fruits = ["Apple", "Banana", "Mango"];
+
+    document.write("Original Array: " + fruits.join(", ") +"<br>");
+    document.write("Length of Array: " + fruits.length + "<br><br>");
+
+    // Add at last
+    fruits.push("Orange");
+    document.write("After push('Orange'): " + fruits.join(", ") + "<br>");
+
+    // Remove last
+    fruits.pop();
+    document.write("After pop(): " + fruits.join(", ") + "<br><br>");
+
+    // Add at beginning
+    fruits.unshift("Grapes");
+    document.write("After unshift('Grapes'): " + fruits.join(", ") + "<br>");
+
+    // Remove first
+    fruits.shift();
+    document.write("After shift(): " + fruits.join(", ") + "<br>");
+
+    // Splice (add/remove at index)
+    fruits.splice(1, 0, "Pineapple", "Kiwi"); // insert at index 1
+    document.write("After splice(1, 0, 'Pineapple','Kiwi'): " + fruits.join(", ") + "<br>");
+
+    // Slice (copy part of array)
+    let sliced = fruits.slice(1, 3);
+    document.write("After slice(1, 3): " + sliced.join(", ") + "<br>");
+
+    // IndexOf
+    let index = fruits.indexOf("Mango");
+    document.write("Index of 'Mango': " + index + "<br>");
+
+    // Sort
+    fruits.sort();
+    document.write("After sort(): " + fruits.join(", ") + "<br>");
+
+    // Reverse
+    fruits.reverse();
+    document.write("After reverse(): " + fruits.join(", ") + "<br>");
+    
+    
+  </script>
+</body>
+</html>
